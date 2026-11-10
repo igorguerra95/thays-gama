@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    /* Paleta Semântica Rosa Quartzo & Branco Gelo */
+    --bg-primary: #F8FAFC;       /* Branco Gelo */
+    --bg-surface: #FFFFFF;       /* Branco Puro para cards e elevações */
+    --bg-subtle: #F1F5F9;        /* Gelo Sutil */
+    --bg-quartz-soft: #FDF2F8;   /* Banho de Quartzo Leve */
+    --bg-quartz-tint: #FCE7F3;   /* Realce de Quartzo */
+    
+    --primary: #F472B6;          /* Rosa Quartzo Puro */
+    --primary-hover: #EC4899;    /* Rosa Quartzo Ativo */
+    --primary-deep: #9D174D;     /* Quartzo Profundo (Garante Contraste WCAG AAA em fundo claro) */
+    --primary-contrast: #831843; /* Alto contraste para títulos e ênfase */
+    --primary-glow: rgba(244, 114, 182, 0.28);
+
+    --secondary: #0F172A;        /* Slate 900 (Formal, Clínico, Nobre) */
+    --secondary-muted: #334155;  /* Slate 700 */
+    --secondary-subtle: #64748B; /* Slate 500 */
+    --hairline-border: rgba(226, 232, 240, 0.9);
+    --hairline-quartz: rgba(244, 114, 182, 0.25);
+
+    /* Sombras em camadas de alta fidelidade */
+    --shadow-subtle: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+    --shadow-card: 0 12px 28px -4px rgba(15, 23, 42, 0.04), 0 8px 12px -6px rgba(244, 114, 182, 0.05);
+    --shadow-card-hover: 0 24px 44px -8px rgba(15, 23, 42, 0.08), 0 12px 20px -6px rgba(244, 114, 182, 0.16);
+    --shadow-glow: 0 0 40px -5px rgba(244, 114, 182, 0.35);
+  }
+
+  html {
+    font-family: var(--font-sans);
+    color: var(--secondary);
+    background-color: var(--bg-primary);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.035em;
+  }
+}
+
+/* Utilitários semânticos e acabamento de estúdio */
+.bg-ice-white {
+  background-color: var(--bg-primary);
+}
+
+.bg-surface-card {
+  background-color: var(--bg-surface);
+}
+
+.bg-quartz-soft {
+  background-color: var(--bg-quartz-soft);
+}
+
+.text-quartz-deep {
+  color: var(--primary-deep);
+}
+
+.text-quartz-contrast {
+  color: var(--primary-contrast);
+}
+
+.text-slate-formal {
+  color: var(--secondary);
+}
+
+.text-slate-muted {
+  color: var(--secondary-muted);
+}
+
+.border-hairline {
+  border: 1px solid var(--hairline-border);
+}
+
+.border-hairline-quartz {
+  border: 1px solid var(--hairline-quartz);
+}
+
+.shadow-premium-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-premium-hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.shadow-quartz-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+/* Textura sutil de fundo estilo agência */
+.bg-grid-subtle {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(226, 232, 240, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(226, 232, 240, 0.4) 1px, transparent 1px);
+}
